@@ -2,8 +2,11 @@
     <string name="app_name">FileManager</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="viewFragmentTitle">View File</string>
-    <string name="editFragmentTitle">Edit File</string>
+    <!-- Fragment Title String -->
+    <string name="view_fragment_title">View File</string>
+    <string name="edit_fragment_title">Edit File</string>
+
+    <!-- Main List Long Click Context Menu -->
+    <string name="edit_menu">Edit</string>
+
 </resources>

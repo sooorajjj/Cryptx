@@ -21,7 +21,7 @@ public class FileDetailActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         FileViewFragment fileViewFragment = new FileViewFragment();
-        setTitle(R.string.viewFragmentTitle);
+        setTitle(R.string.view_fragment_title);
         fragmentTransaction.add(R.id.file_container, fileViewFragment, "NOTE_VIEW_FRAGMENT");
 
         fragmentTransaction.commit();
