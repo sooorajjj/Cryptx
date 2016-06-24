@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="online.klok.filemanager">
+    package="online.klok.cryptx">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="online.klok.cryptx.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,9 +19,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FileDetailActivity"
+            android:name="online.klok.cryptx.FileDetailActivity"
             android:label="@string/edit_fragment_title"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName="online.klok.cryptx.MainActivity"></activity>
     </application>
 
 </manifest>

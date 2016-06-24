@@ -1,15 +1,17 @@
-package online.klok.filemanager;
+package online.klok.cryptx;
 
 
 import android.app.ListFragment;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -62,7 +64,7 @@ public class MainActivityListFragment extends ListFragment {
     public void onListItemClick(ListView l , View v, int position, long id){
         super.onListItemClick(l, v, position, id);
 
-        launchNoteDetailActivity(position);
+        launchFileDetailActivity(MainActivity.FragmentToLaunch.VIEW, position);
 
     }
 
@@ -74,9 +76,26 @@ public class MainActivityListFragment extends ListFragment {
         menuInflater.inflate(R.menu.long_press_menu, menu);
     }
 
+    @Override
+    public boolean onContextItemSelected(MenuItem item){
+
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        int rowPosition = info.position;
+
+        switch(item.getItemId()){
+
+            case R.id.edit:
+
+                launchFileDetailActivity(MainActivity.FragmentToLaunch.EDIT, rowPosition);
+                Log.d("Menu Clicks", " We pressed edit");
+                return true;
+        }
+        return super.onContextItemSelected(item);
+    }
 
 
-    private void launchNoteDetailActivity(int position){
+
+    private void launchFileDetailActivity(MainActivity.FragmentToLaunch ftl, int position){
 
         File file = (File) getListAdapter().getItem(position);
         Intent intent = new Intent(getActivity(), FileDetailActivity.class);
@@ -85,9 +104,15 @@ public class MainActivityListFragment extends ListFragment {
         intent.putExtra(MainActivity.FILE_CATEGORY_EXTRA, file.getCategory());
         intent.putExtra(MainActivity.FILE_ID_EXTRA, file.getId());
 
-
+        switch(ftl){
+            case VIEW:
+                intent.putExtra(MainActivity.FILE_FRAGMENT_TOLOAD_EXTRA, MainActivity.FragmentToLaunch.VIEW);
+                break;
+            case EDIT:
+                intent.putExtra(MainActivity.FILE_FRAGMENT_TOLOAD_EXTRA, MainActivity.FragmentToLaunch.EDIT);
+                break;
+        }
         startActivity(intent);
-
     }
 
 

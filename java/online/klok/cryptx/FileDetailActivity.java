@@ -1,4 +1,4 @@
-package online.klok.filemanager;
+package online.klok.cryptx;
 
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentManager;
@@ -22,7 +22,7 @@ public class FileDetailActivity extends AppCompatActivity {
 
         FileViewFragment fileViewFragment = new FileViewFragment();
         setTitle(R.string.view_fragment_title);
-        fragmentTransaction.add(R.id.file_container, fileViewFragment, "NOTE_VIEW_FRAGMENT");
+        fragmentTransaction.add(R.id.file_container, fileViewFragment, "FILE_VIEW_FRAGMENT");
 
         fragmentTransaction.commit();
 

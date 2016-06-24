@@ -1,4 +1,4 @@
-package online.klok.filemanager;
+package online.klok.cryptx;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,13 +8,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String FILE_ID_EXTRA = "online.klok.filemanager.File Identifier";
-    public static final String FILE_TITLE_EXTRA = "online.klok.filemanager.File Title";
-    public static final String FILE_MESSAGE_EXTRA = "online.klok.filemanager.File Message";
-    public static final String FILE_CATEGORY_EXTRA = "online.klok.filemanager.File Category";
+    public static final String FILE_ID_EXTRA = "online.klok.filemanager.Identifier";
+    public static final String FILE_TITLE_EXTRA = "online.klok.filemanager.Title";
+    public static final String FILE_MESSAGE_EXTRA = "online.klok.filemanager.Message";
+    public static final String FILE_CATEGORY_EXTRA = "online.klok.filemanager.Category";
+    public static final String FILE_FRAGMENT_TOLOAD_EXTRA = "online.klock.filemanager.Fragment_To_Load";
+    public enum FragmentToLaunch{ VIEW, EDIT }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

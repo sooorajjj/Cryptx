@@ -1,4 +1,4 @@
-package online.klok.filemanager;
+package online.klok.cryptx;
 
 
 import android.content.Intent;

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FileManager</string>
+    <string name="app_name">Cryptx</string>
     <string name="action_settings">Settings</string>
 
     <!-- Fragment Title String -->
@@ -9,4 +9,6 @@
     <!-- Main List Long Click Context Menu -->
     <string name="edit_menu">Edit</string>
 
+    <!-- Fragment Widget settings -->
+    <string name="save_file_button">Save Note</string>
 </resources>

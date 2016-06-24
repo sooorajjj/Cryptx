@@ -5,6 +5,6 @@
     android:id="@+id/file_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="online.klok.filemanager.FileDetailActivity">
+    tools:context="online.klok.cryptx.FileDetailActivity">
 
 </LinearLayout>

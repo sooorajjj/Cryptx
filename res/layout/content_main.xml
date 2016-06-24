@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="online.klok.filemanager.MainActivity" tools:showIn="@layout/activity_main">
+    tools:context="online.klok.cryptx.MainActivity" tools:showIn="@layout/activity_main">
 
     <fragment
         android:id="@+id/mainActivityFrag"
-        android:name="online.klok.filemanager.MainActivityListFragment"
+        android:name="online.klok.cryptx.MainActivityListFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>
